@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+        background-color: #f0f0f0;
+    }
+    h1 {
+        font-size: 2em;
+        color: #333;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    li {
+        padding: 5px;
+        background-color: #ddd;
+    }
+
+    </style>
+    Lab 7: HTML and CSS Basics
+
+</head>
+        <body id="Background">
+            <h1>Welcome to HTML and CSS basics</h1>
+            <p>html and css is a very literaly programming language, you are ALMOST programming in actual english</p>
+            <ul id="list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+
+            </ul>
+            <button id="BC" type="button">Change Background</button>
+            <button id="addli" type="button">Add Item</button>
+            
+            <script>
+                let bCButton = document.getElementById("BC");
+                bCButton.addEventListener("click", changeBackground);
+               function changeBackground () {
+                    let background = document.getElementById("Background");
+                    background.style.backgroundColor = "red";
+               }
+                    
+                    let itemButton = document.getElementById("addli");
+                    itemButton.addEventListener("click", addItem);
+                    function addItem () {
+                let newListItem = document.createElement("li");
+                        newListItem.textContent="Python";
+                        let list = document.getElementById("list");
+                        list.appendChild(newListItem);
+            }
+                
+            </script>
+
+        </body>
+</html>
